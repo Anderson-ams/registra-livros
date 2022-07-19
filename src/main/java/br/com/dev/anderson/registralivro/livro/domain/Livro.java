@@ -5,6 +5,7 @@ import java.util.UUID;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import br.com.dev.anderson.registralivro.application.api.NovoLivroRequest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,5 +24,12 @@ public class Livro {
 	private String nome;
 	private String editora;
 	private CategoriaDoLivro categoria;
-	
+
+	public Livro(NovoLivroRequest novoLivro) {
+		this.id = UUID.randomUUID();
+		this.nome = novoLivro.getNome();
+		this.editora = novoLivro.getEditora();
+		this.categoria = novoLivro.getCategoria();
+	}
+
 }
