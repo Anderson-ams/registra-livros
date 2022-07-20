@@ -7,6 +7,7 @@ import lombok.Value;
 public class NovoLivroRequest {
 
 	private String nome;
+	public String autor;
 	private String editora;
 	private CategoriaDoLivro categoria;
 

@@ -22,14 +22,17 @@ public class Livro {
 	@Id
 	private UUID id;
 	private String nome;
+	private String autor;
 	private String editora;
-	private CategoriaDoLivro categoria;
+	@Builder.Default
+	private CategoriaDoLivro categoria = CategoriaDoLivro.ROMANCE;
 
 	public Livro(NovoLivroRequest novoLivro) {
 		this.id = UUID.randomUUID();
 		this.nome = novoLivro.getNome();
+		this.autor = novoLivro.getAutor();
 		this.editora = novoLivro.getEditora();
-		this.categoria = novoLivro.getCategoria();
+		this.categoria = CategoriaDoLivro.ROMANCE;
 	}
 
 }

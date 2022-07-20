@@ -8,7 +8,6 @@ import br.com.dev.anderson.registralivro.application.api.LivrosApi;
 import br.com.dev.anderson.registralivro.application.api.NovoLivroRequest;
 import br.com.dev.anderson.registralivro.application.api.NovoLivroResponse;
 import br.com.dev.anderson.registralivro.application.service.LivroApplicationService;
-import br.com.dev.anderson.registralivro.livro.domain.Livro;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -28,11 +27,7 @@ public class LivrosController implements LivrosApi{
 		return livroAdd;
 	}
 	
-	@Override
-	public Livro  getNovoLivro(@Valid NovoLivroRequest novoLivro) {
-		log.info("[start] LivroController - getLivros");
-		return null;
-	}
+
 
 	
 }

@@ -11,13 +11,15 @@ public class NovoLivroResponse {
 
 	private UUID id;
 	private String nome;
+	private String autor;
 	private String editora;
-	private CategoriaDoLivro categoria;
+	private CategoriaDoLivro categoria; 
 
 	public NovoLivroResponse(Livro adcionaLivro) {
 
 		this.id = adcionaLivro.getId();
 		this.nome = adcionaLivro.getNome();
+		this.autor = adcionaLivro.getAutor();
 		this.editora = adcionaLivro.getEditora();
 		this.categoria = adcionaLivro.getCategoria();
 
